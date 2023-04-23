@@ -19,7 +19,7 @@ class SplashPage extends StatelessWidget {
           return ScreenTypeLayout.builder(
             mobile: (context) => OrientationLayoutBuilder(
               portrait: (context) => SplashMobilePortrait(sizingInformation: sizingInformation),
-              landscape: (context) => SplashMobilePortrait(sizingInformation: sizingInformation),
+              landscape: (context) => SplashMobileLandscape(sizingInformation: sizingInformation),
             ),
             tablet: (context) => OrientationLayoutBuilder(
                 portrait: (context) => SplashTabletPortrait(sizingInformation: sizingInformation),

@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AdaptiveTheme(
-      initial: AdaptiveThemeMode.dark,
+      initial: AdaptiveThemeMode.light,
       light: ThemeConfig.lightTheme,
       dark: ThemeConfig.darkTheme,
       builder: (light, dark) => ScreenUtilInit(

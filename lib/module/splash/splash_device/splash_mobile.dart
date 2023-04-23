@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hisab/helper/internet_checker_helper/internet_checker_helper_logic.dart';
 import 'package:hisab/module/splash/splash_logic.dart';
+import 'package:hisab/shared/constants/colors.dart';
+import 'package:hisab/shared/constants/constant_size.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../shared/constant_file/constant_assets.dart';
@@ -26,19 +28,18 @@ class SplashMobilePortrait extends GetView<SplashLogic> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  height: sizingInformation!.localWidgetSize.height * 0.3,
+                  height: sizingInformation!.localWidgetSize.height * 0.01,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: SizedBox(
-                    child: Brightness.dark != false ? Image.asset(ConstantAssets.loaderGifDarkMode) : Image.asset(ConstantAssets.loaderGifLightMode),
+                    child: Get.isDarkMode != false ? Image.asset(ConstantAssets.loaderGifDarkMode) : Image.asset(ConstantAssets.loaderGifLightMode),
                   ),
                 ),
-                SizedBox(
-                  height: sizingInformation!.localWidgetSize.height * 0.3,
+                const SizedBox(
+                  height: SizeConstant.CONTENTSPACING + 20,
                 ),
                 const CupertinoActivityIndicator(),
-
               ],
             ),
           ),
@@ -67,19 +68,18 @@ class SplashMobileLandscape extends GetView<SplashLogic> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  height: sizingInformation!.localWidgetSize.height * 0.3,
+                  height: sizingInformation!.localWidgetSize.height * 0.01,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: SizedBox(
-                    child: Brightness.dark != false ? Image.asset(ConstantAssets.loaderGifDarkMode) : Image.asset(ConstantAssets.loaderGifLightMode),
+                    child: Get.isDarkMode != false ? Image.asset(ConstantAssets.loaderGifDarkMode) : Image.asset(ConstantAssets.loaderGifLightMode),
                   ),
                 ),
-                SizedBox(
-                  height: sizingInformation!.localWidgetSize.height * 0.3,
+                const SizedBox(
+                  height: SizeConstant.CONTENTSPACING + 20,
                 ),
                 const CupertinoActivityIndicator(),
-
               ],
             ),
           ),
