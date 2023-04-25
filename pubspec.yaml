@@ -21,6 +21,8 @@ dependencies:
   flutter_screenutil: ^5.7.0
   google_fonts: ^4.0.3
   flutter_easyloading: ^3.0.5
+  dio: ^5.1.1
+  flutter_islamic_icons: ^1.0.2
   
 
 dev_dependencies:

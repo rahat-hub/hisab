@@ -9,7 +9,23 @@ class DashboardTabletPortrait extends GetView<DashboardLogic> {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text("Dashboard"),
+        ),
+        body: Column(
+          children: [
+            FloatingActionButton(
+              onPressed: (){
+
+              },
+              child: const Text("Tap To Show DATA"),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 
@@ -19,6 +35,22 @@ class DashboardTabletLandscape extends GetView<DashboardLogic> {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text("Dashboard"),
+        ),
+        body: Column(
+          children: [
+            FloatingActionButton(
+              onPressed: (){
+
+              },
+              child: const Text("Tap To Show DATA"),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
