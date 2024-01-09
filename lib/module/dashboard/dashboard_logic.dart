@@ -95,9 +95,13 @@ class DashboardLogic extends GetxController {
 
   getPrayerTimeData() async {
     dio.Response data = await ApiProvider().getPrayerTimeData(
-      country: "india",
+      country: "bangladesh",
     );
+
+    print(data.data);
+
     if(data.statusCode == 200){
+      print(data.data);
       prayerTimeData.addAll(data.data);
     }
     prayerTimeDataToday.addAll(prayerTimeData["today"]);

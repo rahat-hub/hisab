@@ -16,30 +16,44 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AdaptiveTheme(
-      initial: AdaptiveThemeMode.dark,
-      light: ThemeConfig.lightTheme,
-      dark: ThemeConfig.darkTheme,
-      builder: (light, dark) => ScreenUtilInit(
-        minTextAdapt: true,
-        splitScreenMode: true,
-        designSize: const Size(360, 690),
-        builder: (context,child) {
-          return GetMaterialApp(
-            builder: EasyLoading.init(),
-            debugShowCheckedModeBanner: false,
-            theme: light,
-            darkTheme: dark,
-            enableLog: true,
-            initialRoute: AppPages.INITIAL,
-            defaultTransition: Transition.fade,
-            getPages: AppPages.routes,
-            smartManagement: SmartManagement.keepFactory,
-            title: 'Hisab',
-          );
-        },
-      ),
+
+    return GetMaterialApp(
+      builder: EasyLoading.init(),
+      debugShowCheckedModeBanner: false,
+      //theme: light,
+      //darkTheme: dark,
+      enableLog: true,
+      initialRoute: AppPages.INITIAL,
+      defaultTransition: Transition.fade,
+      getPages: AppPages.routes,
+      smartManagement: SmartManagement.keepFactory,
+      title: 'Hisab',
     );
+
+    // return AdaptiveTheme(
+    //   initial: AdaptiveThemeMode.dark,
+    //   light: ThemeConfig.lightTheme,
+    //   dark: ThemeConfig.darkTheme,
+    //   builder: (light, dark) => ScreenUtilInit(
+    //     minTextAdapt: true,
+    //     splitScreenMode: true,
+    //     designSize: const Size(360, 690),
+    //     builder: (context,child) {
+    //       return GetMaterialApp(
+    //         builder: EasyLoading.init(),
+    //         debugShowCheckedModeBanner: false,
+    //         theme: light,
+    //         darkTheme: dark,
+    //         enableLog: true,
+    //         initialRoute: AppPages.INITIAL,
+    //         defaultTransition: Transition.fade,
+    //         getPages: AppPages.routes,
+    //         smartManagement: SmartManagement.keepFactory,
+    //         title: 'Hisab',
+    //       );
+    //     },
+    //   ),
+    // );
   }
 }
 
